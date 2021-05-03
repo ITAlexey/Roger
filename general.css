@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Lora');
+/* Шрифты */
+p, a{
+  font-family: 'Roboto', sans-serif;
+}
+p{
+  font-size: 20px;
+}
+h1{
+  font-family: 'Slabo 27px', serif;
+  font-size: 90px;
+
+  margin-bottom: -25px;
+}
+h3{
+  font-family: 'Lora', serif;
+  font-size: 36px;
+
+  margin-bottom: -20px;
+}
+h4{
+  font-family: 'Lora', serif;
+  font-size: 28px;
+}
+a{
+  text-decoration: none;
+}
+.first-p{
+  color: #282828;
+}
+.big-a{
+  font-size: 40px;
+  color: #0f112e;
+}
+.small-a{
+  font-size: 18px;
+  color: #282828;
+}
+/* Тело */
+body{
+  width: 100%;
+  height: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.grid-container{
+  width: 1200px;
+  height: 850px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.5fr 280px 280px 1fr;
+  grid-template-rows: 1fr 1fr 315px;
+  grid-template-areas:
+  "a1 main main a4"
+  "a1 main main a3"
+  "a2 b1 b1 a5";
+  grid-gap: 0;
+}
+/* INDEX.HTML */
+.g-main {
+    grid-area: main;
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.g-main-item{
+    text-align: center;
+}
+/* СТАТЬИ-ССЫЛКИ */
+.g-article-1{
+  grid-area: a2;
+
+  background-color: #ffffff;
+}
+.g-article-2{
+  grid-area: a3;
+
+  background-color: #ffffff;
+}
+.g-article{
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.g-article-item{
+  text-align: center;
+}
+.g-article-item a{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+/* ВИДЕО */
+.g-video-1{
+  grid-area: b1;
+}
+/* ОКО */
+.g-illuminati{
+  grid-area: a4;
+
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #be7be7;
+}
+.g-illuminati-item{
+  text-align: center;
+}
+.text-illuminati{
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  font-size: 28px;
+  color: #ffffff;
+  background-color: rgba(85, 85, 85, 0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+}
+.g-illuminati:hover .text-illuminati{
+  visibility: visible;
+  opacity: 1;
+}
+.g-illuminati-item img{
+  width: 240px;
+  height: 240px;
+}
+/* ПРИШЕЛЕЦ */
+.g-alien{
+  grid-area: a1;
+  height: 100%;
+  width: 100%;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #d2d2d2;
+}
+.text-alien{
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  font-size: 24px;
+  color: #ffffff;
+  background-color: rgba(85, 85, 85, 0.8);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .2s, visibility .2s;
+}
+.text-alien a{
+  width: 100%;
+  height: 100%;
+
+  text-decoration: none;
+  color: #ffffff;
+}
+.g-alien:hover .text-alien{
+  visibility: visible;
+  opacity: 1;
+}
+.g-alien-item img{
+  width: 220px;
+  height: 300px;
+}
+/* INSPIRATION */
+.g-inspiration{
+  grid-area: a5;
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background-color: #76ec58;
+}
+.insp-a{
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 28px;
+  color: #ffffff;
+
+  transform: translate(0, 25px);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .5s, visibility .5s, transform .5s;
+}
+.g-inspiration:hover .insp-a{
+  opacity: 1;
+  transform: translate(0, 0);
+  visibility: visible;
+}
+.g-inspiration h4{
+  visibility: visible;
+  opacity: 1;
+  transition: opacity .5s, visibility 5s;
+}
+.g-inspiration:hover h4{
+  visibility: hidden;
+  opacity: 0;
+}
